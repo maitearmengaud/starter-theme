@@ -64,7 +64,6 @@ npm run packages-update
 
 ```
 starter/
-├── assets/              # Assets statiques (fonts, images)
 ├── config/              # Configuration du thème
 ├── includes/            # Fonctionnalités PHP
 ├── src/                 # Code source
@@ -80,9 +79,39 @@ starter/
 
 ## 🎨 Personnalisation
 
-### Couleurs
+### Configuration des styles
 
-Les couleurs sont configurables via le fichier `config/colors/starter.json` et peuvent être modifiées dans l'éditeur de blocs WordPress.
+Le thème utilise un système de configuration modulaire où chaque token de design est défini dans un fichier spécifique du dossier `config/`. Voici le processus de configuration :
+
+#### Fichiers de configuration disponibles
+
+- `config/colors/` - Configuration des couleurs
+- `config/typography.json` - Tailles et familles de polices
+- `config/spacing.json` - Espacements et marges
+- `config/shadow.json` - Ombres et effets
+- `config/border.json` - Bordures et rayons
+- `config/layout.json` - Disposition et conteneurs
+- `config/blocks.json` - Configuration des blocs WordPress
+
+#### Processus de configuration (exemple avec les couleurs)
+
+1. **Palette de couleurs** : `config/color.json`
+   - Définit la palette de couleurs WordPress (hex, slug, nom)
+   - Exemple : `{"slug": "primary", "color": "#F59E0B", "name": "Primary"}`
+
+2. **Variables CSS** : `src/styles/index.scss`
+   - Définit les variables CSS personnalisées (format RGB)
+   - Exemple : `--primary: 245 158 11;`
+
+3. **Configuration Tailwind** : `tailwind.config.js`
+   - Mappe les variables CSS vers les classes Tailwind
+   - Exemple : `primary: "rgb(var(--primary))"`
+
+4. **Classes utilitaires** : `config/colors/starter.json`
+   - Définit les combinaisons de classes Tailwind pour l'éditeur
+   - Exemple : `"primary": "bg-primary text-dark"`
+   - Utilisé par le `StarterColorConfigurator` pour l'éditeur de blocs
+
 
 ### Typographie
 
@@ -90,12 +119,67 @@ Le thème utilise des polices personnalisées :
 - **Inclusive Sans** : Police principale
 - **Yeseva One** : Police d'accent
 
+#### Processus pour changer les polices
+
+Pour modifier les polices du thème, suivez ces étapes dans l'ordre :
+
+1. **Ajouter les fichiers de police** : `src/fonts/`
+   - Placez vos fichiers de police (format WOFF2 recommandé) dans le dossier `src/fonts/`
+   - Exemple : `ma-nouvelle-police.woff2`
+
+2. **Configurer WordPress** : `config/typography.json`
+   - Modifiez la section `fontFamilies` pour ajouter votre nouvelle police
+   - Exemple :
+   ```json
+   {
+     "fontFamily": "Ma Nouvelle Police, Arial, sans-serif",
+     "slug": "ma-nouvelle-police",
+     "name": "Ma Nouvelle Police",
+     "fontFace": [
+       {
+         "fontDisplay": "swap",
+         "fontStyle": "normal",
+         "fontWeight": "400",
+         "src": [
+           "file:./src/fonts/ma-nouvelle-police.woff2"
+         ]
+       }
+     ]
+   }
+   ```
+
+3. **Configurer Tailwind** : `tailwind.config.js`
+   - Ajoutez votre police dans la section `fontFamily.extend`
+   - Exemple : `"ma-nouvelle-police": ["Ma Nouvelle Police", "Arial", "sans-serif"]`
+   - Modifiez les règles de base pour appliquer la police aux éléments souhaités
+
+4. **Appliquer dans les styles** : `src/styles/index.scss`
+   - Utilisez les classes Tailwind pour appliquer la police
+   - Exemple : `@apply font-ma-nouvelle-police;`
+
+5. **Reconstruire les assets** :
+   ```bash
+   npm run build
+   ```
+
+#### Classes Tailwind disponibles
+
+- `font-inclusive` : Police Inclusive Sans
+- `font-yeseva` : Police Yeseva One
+- `font-ma-nouvelle-police` : Votre nouvelle police (après configuration)
+
 ### Templates disponibles
 
-- `index.html` - Page d'accueil
+- `index.html` - Template principal
+- `home.html` - Page d'accueil
 - `single.html` - Articles individuels
 - `page.html` - Pages statiques
 - `404.html` - Page d'erreur 404
+
+### Template Parts
+
+- `header.html` - En-tête du site
+- `footer.html` - Pied de page du site
 
 ## 🔍 SEO et Performance
 
@@ -110,28 +194,9 @@ Le thème utilise des polices personnalisées :
 - Protection contre les injections
 - Headers de sécurité appropriés
 
-## 📄 Licence
-
-Ce thème est sous licence GNU General Public License v2 ou ultérieure.
-
 ## 👨‍💻 Auteur
 
 **Maïté Armengaud**
-
-## 🤝 Contribution
-
-Les contributions sont les bienvenues ! N'hésitez pas à :
-1. Fork le projet
-2. Créer une branche pour votre fonctionnalité
-3. Commiter vos changements
-4. Pousser vers la branche
-5. Ouvrir une Pull Request
-
-## 📞 Support
-
-Pour toute question ou problème :
-- Ouvrez une issue sur GitHub
-- Consultez la documentation WordPress
 
 ## 🔄 Changelog
 
