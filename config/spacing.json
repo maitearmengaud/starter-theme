@@ -1,0 +1,74 @@
+{
+    "margin": true,
+    "padding": true,
+    "blockGap": true,
+    "customSpacingSize": false,
+    "spacingScale": {
+      "steps": 1
+    },
+    "defaultSpacingSizes": false,
+    "units": ["rem"],
+    "allowCustomSpacing": false,
+    "spacingSizes": [
+      {
+        "name": "zero",
+        "size": "0",
+        "slug": "01-zero"
+      },
+      {
+        "name": "2xs",
+        "size": "0.5rem",
+        "slug": "02-2xs"
+      },
+      {
+        "name": "xs",
+        "size": "1rem",
+        "slug": "03-xs"
+      },
+      {
+        "name": "s",
+        "size": "1.5rem",
+        "slug": "04-s"
+      },
+      {
+        "name": "m",
+        "size": "2rem",
+        "slug": "05-m"
+      },
+      {
+        "name": "l",
+        "size": "3rem",
+        "slug": "06-l"
+      },
+      {
+        "name": "xl",
+        "size": "4rem",
+        "slug": "07-xl"
+      },
+      {
+        "name": "2xl",
+        "size": "5rem",
+        "slug": "08-2xl"
+      },
+      {
+        "name": "3xl",
+        "size": "7.5rem",
+        "slug": "09-3xl"
+      },
+      {
+        "name": "4xl",
+        "size": "10rem",
+        "slug": "10-4xl"
+      },
+      {
+        "name": "5xl",
+        "size": "12rem",
+        "slug": "11-5xl"
+      },
+      {
+        "name": "Global Padding",
+        "size": "clamp(1rem, 2vw + 1.5rem, 5rem)",
+        "slug": "12-global-padding"
+      }
+    ]
+}

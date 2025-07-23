@@ -1,0 +1,220 @@
+@config "../../tailwind.config.js";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  
+  :root {
+    // ===== PURE COLOR TOKENS =====
+    --white: 255 255 255;  // Blanc 
+    --black: 0 0 0;        // Noir 
+    
+    // ===== SEMANTIC COLOR TOKENS =====
+    --dark: 15 23 42;      // Gris très foncé
+    --light: 248 250 252;  // Gris très clair
+    --primary: 245 158 11;   // Jaune doré
+    --secondary: 219 39 119;  // Rose profond
+
+    // ===== THEME COLORS =====
+    // Accent color for interactive elements (buttons, links, etc.)
+    --accent-color: var(--primary);
+    --accent-foreground: var(--dark);
+    
+    // Default background and text colors
+    --background: var(--white);
+    --foreground: var(--black);
+
+    // ===== LAYOUT TOKENS =====
+    --global-padding: 2rem;
+    
+    // ===== OPTIONAL: ADD YOUR CUSTOM COLORS HERE =====
+    // --success: 34 197 94;     // Green
+    // --warning: 251 191 36;    // Yellow
+    // --error: 239 68 68;       // Red
+  }
+
+  // ===== RESPONSIVE GLOBAL PADDING =====
+  @media (min-width: 768px) {
+    :root {
+      --global-padding: 4rem;
+    }
+  }
+
+  // ===== BASE STYLES =====
+  body {
+    @apply text-base;
+    @apply text-foreground;
+    @apply bg-background;
+    @apply overflow-x-hidden;
+    @apply md:overflow-x-visible;
+    @apply relative;
+    
+    // ===== OPTIONAL: ADD YOUR FONT FAMILY =====
+    @apply font-inclusive;
+  }
+
+  // ===== MAIN CONTENT SPACING =====
+  main > .wp-block-group:first-child {
+    @apply pt-32;
+    @apply md:pt-64;
+  }
+
+  // ===== GLOBAL PADDING UTILITY =====
+  .has-global-padding {
+    @apply px-global-padding;
+  }
+
+  .has-global-padding > .alignfull.has-global-padding,
+  .has-global-padding > .alignfull.has-background {
+    @apply -mx-global-padding;
+  }
+
+  // ===== TYPOGRAPHY =====
+  .text-h1, .text-h2, .text-h3, .text-h4, .text-h5, .text-h6 {
+    @apply text-balance;
+  }
+
+  // ===== BACKGROUND COLOR UTILITIES =====
+  .has-background-color {
+    @apply bg-background;
+    @apply text-foreground;
+  }
+
+  .has-inline-color {
+    @apply text-accent;
+  }
+}
+
+@layer components {
+  
+  // ===== WORDPRESS BLOCKS =====
+  
+  // Details block
+  details.wp-block-details {
+    transition: grid-template-rows 0.4s ease-in-out;
+  }
+
+  .wp-block-details summary::marker,
+  .wp-block-details summary::-webkit-details-marker {
+    font-size: 0 !important;
+    @apply content-none;
+    @apply hidden;
+  }
+
+  .wp-block-details[open] .wp-block-details__content {
+    grid-template-rows: 1fr;
+  }
+
+  // Gallery block
+  .wp-block-gallery figure {
+    @apply rounded-none #{!important};
+  }
+
+  // Cover block in full-width columns
+  .wp-block-columns.w-screen .wp-block-cover {
+    @apply h-full;
+    @apply m-0;
+    @apply max-w-none #{!important};
+  }
+
+  .wp-block-columns.w-screen .wp-block-cover .wp-block-cover__image-background,
+  .wp-block-columns.w-screen .wp-block-cover .wp-block-cover__background {
+    @apply hidden;
+    @apply md:block;
+  }
+
+  // ===== BUTTONS =====
+  .wp-block-button:not(.is-style-link):not(.is-style-outline) {
+    --background: var(--primary);
+    --foreground: var(--black);
+  }
+
+  .bg-dark .wp-block-button:not(.is-style-link):not(.is-style-outline),
+  .bg-dark .wp-block-social-links .wp-social-link {
+    --background: var(--white);
+    --foreground: var(--dark);
+  }
+  
+  // ===== FORMS =====
+  input,
+  textarea {
+    --background: var(--light);
+    --foreground: var(--dark);
+  }
+
+  // ===== COVER BLOCK INNER CONTAINER =====
+  .wp-block-cover__inner-container {
+    & > *:first-child {
+      @apply mt-0;
+    }
+
+    & > *:last-child {
+      @apply mb-0;
+    }
+
+    & > .wp-block-columns {
+      @apply px-0 #{!important};
+    }
+  }
+
+  // ===== GROUP BLOCK INNER CONTAINER =====
+  .wp-block-group__inner-container {
+    & > *:first-child {
+      @apply mt-0;
+    }
+
+    & > *:last-child,
+    & > .wp-block-columns {
+      @apply mb-0;
+    }
+
+    & > .wp-block-columns {
+      @apply px-0 #{!important};
+      @apply md:gap-x-24;
+    }
+  }
+}
+
+@layer utilities {
+  
+  // ===== BACKGROUND COLOR UTILITIES =====
+  // Noir pur - pour les sections très contrastées
+  .bg-black {
+    --background: var(--black);
+    --foreground: var(--white);
+    --accent-color: var(--white);
+  }
+
+  // Gris très foncé - pour les sections sombres mais pas noires
+  .bg-dark {
+    --background: var(--dark);
+    --foreground: var(--light);
+    --accent-color: var(--light);
+  }
+
+  // Blanc pur - pour les sections très claires
+  .bg-white {
+    --background: var(--white);
+    --foreground: var(--black);
+    --accent-color: var(--black);
+  }
+
+  // Gris très clair - pour les sections claires mais pas blanches
+  .bg-light {
+    --background: var(--light);
+    --foreground: var(--dark);
+    --accent-color: var(--dark);
+  }
+
+  // ===== SCROLLBAR UTILITIES =====
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE et Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+}

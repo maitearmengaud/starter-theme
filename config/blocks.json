@@ -1,0 +1,70 @@
+{
+    "core/paragraph": {
+      "typography": {
+        "fontFamily": true,
+        "fontSize": true,
+        "lineHeight": true,
+        "fontWeight": true
+      },
+      "color": {
+        "text": true,
+        "background": true
+      }
+    },
+    "core/heading": {
+      "typography": {
+        "fontFamily": true,
+        "fontSize": true,
+        "lineHeight": true,
+        "fontWeight": true
+      },
+      "color": {
+        "text": true,
+        "background": true
+      }
+    },
+    "core/button": {
+      "typography": {
+        "fontFamily": true,
+        "fontSize": true,
+        "fontWeight": true
+      },
+      "color": {
+        "text": true,
+        "background": true
+      },
+      "border": {
+        "radius": true,
+        "width": true
+      },
+      "spacing": {
+        "padding": true
+      }
+    },
+    "core/group": {
+      "spacing": {
+        "padding": true,
+        "margin": true
+      }
+    },
+    "core/columns": {
+      "spacing": {
+        "blockGap": true
+      }
+    },
+    "core/column": {
+      "spacing": {
+        "padding": true
+      }
+    },
+    "core/cover": {
+      "spacing": {
+        "padding": true
+      }
+    },
+    "core/image": {
+      "border": {
+        "radius": true
+      }
+    }
+  } 

@@ -1,0 +1,84 @@
+{
+  "fontSizes": [
+    { "slug": "h1", "size": "5.625rem", "name": "H1" },
+    { "slug": "h2", "size": "4.375rem", "name": "H2" },
+    { "slug": "h3", "size": "3.125rem", "name": "H3" },
+    { "slug": "h4", "size": "1.875rem", "name": "H4" },
+    { "slug": "h5", "size": "1.5rem", "name": "H5" },
+    { "slug": "h6", "size": "1.25rem", "name": "H6" },
+    { "slug": "base", "size": "1rem", "name": "Base" },
+    { "slug": "big", "size": "2rem", "name": "Big" },
+    { "slug": "button", "size": "1.25rem", "name": "Button" },
+    { "slug": "legend", "size": "0.875rem", "name": "Legend" }
+  ],
+  "fontFamilies": [
+    {
+      "fontFamily": "Yeseva One, serif",
+      "slug": "yeseva",
+      "name": "Yeseva One",
+      "fontFace": [
+        {
+          "fontDisplay": "swap",
+          "fontWeight": "400",
+          "fontStyle": "normal",
+          "src": [
+            "file:./src/fonts/yeseva-one.woff2",
+            "file:./src/fonts/yeseva-one.woff"
+          ]
+        }
+      ]
+    },
+    {
+      "fontFamily": "Inclusive Sans, Arial, sans-serif",
+      "slug": "inclusive",
+      "name": "Inclusive Sans",
+      "fontFace": [
+        {
+          "fontDisplay": "swap",
+          "fontStyle": "normal",
+          "variable": true,
+          "fontWeight": "300 700",
+          "src": [
+            "file:./src/fonts/inclusive-sans.woff2",
+            "file:./src/fonts/inclusive-sans.woff"
+          ]
+        }
+      ]
+    }
+  ],
+  "fontWeight": [
+    {
+      "slug": "light",
+      "weight": "300",
+      "name": "Light"
+    },
+    {
+      "slug": "regular",
+      "weight": "400",
+      "name": "Regular"
+    },
+    {
+      "slug": "medium",
+      "weight": "500",
+      "name": "Medium"
+    },
+    {
+      "slug": "semi-bold",
+      "weight": "600",
+      "name": "Semi Bold"
+    },
+    {
+      "slug": "bold",
+      "weight": "700",
+      "name": "Bold"
+    }
+  ],
+  "customFontSize": false,
+  "defaultFontSizes": false,
+  "lineHeight": false,
+  "letterSpacing": false,
+  "fontStyle": false,
+  "textDecoration": true,
+  "textTransform": true,
+  "dropCap": false
+} 

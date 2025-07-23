@@ -1,0 +1,179 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "title": "Portfolio",
+  "settings": {
+    "color": {
+      "palette": [
+        {
+          "color": "rgb(0, 0, 0)",
+          "slug": "black",
+          "name": "Black"
+        },
+        {
+          "color": "rgb(255, 255, 255)",
+          "slug": "white",
+          "name": "White"
+        },
+        {
+          "color": "rgb(29, 47, 75)",
+          "slug": "dark",
+          "name": "Dark"
+        },
+        {
+          "color": "rgb(248, 250, 252)",
+          "slug": "light",
+          "name": "Light"
+        },
+        {
+          "color": "rgb(245, 158, 11)",
+          "slug": "primary",
+          "name": "Primary"
+        },
+        {
+          "color": "rgb(219, 39, 119)",
+          "slug": "secondary",
+          "name": "Secondary"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var(--wp--preset--color--light)",
+      "text": "var(--wp--preset--color--dark)"
+    },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--inclusive)",
+      "fontSize": "var(--wp--preset--font-size--base)",
+      "lineHeight": 1.6,
+      "fontWeight": "var(--wp--preset--font-weight--regular)",
+      "textDecoration": "none",
+      "textTransform": "none"
+    },
+    "elements": {
+      "heading": {
+        "color": {
+          "text": "var(--wp--preset--color--primary)"
+        }
+      },
+      "h1": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--h-1)"
+        }
+      },
+      "h2": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--h-2)"
+        }
+      },
+      "h3": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--h-3)"
+        }
+      },
+      "h4": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--h-4)"
+        }
+      },
+      "h5": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--h-5)"
+        }
+      },
+      "h6": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--h-6)"
+        }
+      }
+    },
+    "blocks": {
+      "core/heading": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--yeseva)",
+          "fontWeight": 400,
+          "lineHeight": 1.2
+        }
+      },
+      "core/paragraph": {
+        "color": {
+          "text": "var(--wp--preset--color--dark)"
+        },
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--inclusive)"
+        }
+      },
+      "core/button": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--inclusive)",
+          "fontWeight": "var(--wp--preset--font-weight--regular)",
+          "fontSize": "var(--wp--preset--font-size--button)"
+        },
+        "color": {
+          "text": "var(--wp--preset--color--black)",
+          "background": "var(--wp--preset--color--primary)"
+        }
+      },
+      "core/image": {
+        "border": {
+          "radius": "var(--wp--preset--border-radius--md)"
+        }
+      },
+      "core/group": {
+        "spacing": {
+          "padding": {
+            "top": "var(--wp--preset--spacing--xl)",
+            "bottom": "var(--wp--preset--spacing--xl)",
+            "left": "var(--wp--preset--spacing--xl)",
+            "right": "var(--wp--preset--spacing--xl)"
+          }
+        }
+      },
+      "core/columns": {
+        "spacing": {
+          "blockGap": "var(--wp--preset--spacing--xl)"
+        }
+      }
+    }
+  },
+  "templates": [
+    {
+      "name": "home",
+      "title": "Home",
+      "slug": "home"
+    },
+    {
+      "name": "blog",
+      "title": "Blog",
+      "slug": "blog"
+    },
+    {
+      "name": "404",
+      "title": "404",
+      "slug": "404"
+    },
+    {
+      "name": "single",
+      "title": "Single",
+      "slug": "single"
+    },
+    {
+      "name": "page",
+      "title": "Page",
+      "slug": "page"
+    }
+  ],
+  "templateParts": [
+    {
+      "name": "header",
+      "title": "Header",
+      "area": "header"
+    },
+    {
+      "name": "footer",
+      "title": "Footer",
+      "area": "footer"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "palette": [
+    {
+      "slug": "black",
+      "color": "#000000",
+      "name": "Black"
+    },
+    {
+      "slug": "white",
+      "color": "#FFFFFF",
+      "name": "White"
+    },
+    {
+      "slug": "dark",
+      "color": "#3D3D3D",
+      "name": "Dark"
+    },
+    {
+      "slug": "light",
+      "color": "#FAF7F0",
+      "name": "Light"
+    },
+    {
+      "slug": "primary",
+      "color": "#F59E0B",
+      "name": "Primary"
+    },
+    {
+      "slug": "secondary",
+      "color": "#DB2777",
+      "name": "Secondary"
+    }
+  ],
+  "defaultPalette": false,
+  "defaultGradients": false,
+  "defaultDuotone": false,
+  "custom": false,
+  "customGradient": false,
+  "customDuotone": false
+}

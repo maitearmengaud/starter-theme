@@ -1,0 +1,8 @@
+{
+  "black": "bg-black text-white",
+  "white": "bg-white text-dark",
+  "dark": "bg-dark text-white",
+  "light": "bg-light text-dark",
+  "primary": "bg-primary text-dark",
+  "secondary": "bg-secondary text-white"
+} 

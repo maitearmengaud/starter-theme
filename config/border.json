@@ -1,0 +1,23 @@
+{
+    "color": false,
+    "defaultRadius": false,
+    "customRadius": false,
+    "radius": {
+      "sm": "0.25rem",
+      "md": "0.5rem",
+      "lg": "1rem",
+      "xl": "2rem",
+      "round": "50%",
+      "none": "0"
+    },
+    "style": false,
+    "width": {
+      "1": "1px",
+      "2": "2px",
+      "4": "4px",
+      "8": "8px"
+    },
+    "__experimentalDefaultControls": {
+      "width": true
+    }
+} 
