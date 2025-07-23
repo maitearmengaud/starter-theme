@@ -1,6 +1,6 @@
 <?php
 
-namespace Portfolio\BlockEditor;
+namespace Starter\BlockEditor;
 
 use BackTo\Framework\Contracts\Hooks;
 

@@ -1,6 +1,6 @@
-# Portfolio - Thème WordPress
+# Starter - Thème WordPress
 
-Un thème WordPress moderne et élégant conçu pour les portfolios et sites créatifs, utilisant Tailwind CSS et les dernières technologies web.
+Un thème WordPress moderne et élégant conçu pour tous types de projets, utilisant Tailwind CSS et les dernières technologies web.
 
 ## 🚀 Caractéristiques
 
@@ -24,7 +24,7 @@ Un thème WordPress moderne et élégant conçu pour les portfolios et sites cr�
 1. Clonez ce repository dans votre dossier `wp-content/themes/` :
 ```bash
 cd wp-content/themes/
-git clone https://github.com/maitearmengaud/starter-theme.git portfolio
+git clone https://github.com/maitearmengaud/starter-theme.git starter
 ```
 
 2. Activez le thème depuis l'administration WordPress
@@ -32,7 +32,7 @@ git clone https://github.com/maitearmengaud/starter-theme.git portfolio
 ### 2. Installation des dépendances (développement)
 
 ```bash
-cd portfolio
+cd starter
 npm install
 ```
 
@@ -63,7 +63,7 @@ npm run packages-update
 ### Structure du projet
 
 ```
-portfolio/
+starter/
 ├── assets/              # Assets statiques (fonts, images)
 ├── config/              # Configuration du thème
 ├── includes/            # Fonctionnalités PHP
@@ -82,7 +82,7 @@ portfolio/
 
 ### Couleurs
 
-Les couleurs sont configurables via le fichier `config/colors/portfolio.json` et peuvent être modifiées dans l'éditeur de blocs WordPress.
+Les couleurs sont configurables via le fichier `config/colors/starter.json` et peuvent être modifiées dans l'éditeur de blocs WordPress.
 
 ### Typographie
 

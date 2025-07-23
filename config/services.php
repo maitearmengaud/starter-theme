@@ -9,7 +9,7 @@ use BackTo\Framework\PostMeta\PostMetaStructureRegistry;
 use BackTo\Framework\PostMeta\RegisterPostMetaStructure;
 use BackTo\Framework\PostMeta\Repository\PostMetaRepository;
 use BackTo\DesignSystem\Foundation\Color\Configurator\BackgroundColorConfigurator;
-use Portfolio\Configurator\PortfolioColorConfigurator;
+use Starter\Configurator\StarterColorConfigurator;
 
 use BackToVendor\Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
@@ -38,12 +38,12 @@ return function (ContainerConfigurator $container) {
     $services->set(RemoveEmojis::class);
 
     // Design System
-    $services->set(BackgroundColorConfigurator::class, PortfolioColorConfigurator::class);
+    $services->set(BackgroundColorConfigurator::class, StarterColorConfigurator::class);
 
     // Makes classes in your-folder/ available to be used as services.
-    $services->load('Portfolio\\', $themeDirectory . '/includes/*')
+    $services->load('Starter\\', $themeDirectory . '/includes/*')
              ->exclude($themeDirectory . '/includes/{Entity,Components,Tests,OrOtherFolderToNotRegister}');
     
     // Register BlockEditor services
-    $services->set(\Portfolio\BlockEditor\EditorSettings::class);
+    $services->set(\Starter\BlockEditor\EditorSettings::class);
 }; 

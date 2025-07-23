@@ -2,7 +2,7 @@
 
 use BackTo\Framework\Theme\ThemeKernel;
 
-class PortfolioTheme extends ThemeKernel
+class StarterTheme extends ThemeKernel
 {
     protected function getConfigDir(): string
     {
@@ -10,6 +10,6 @@ class PortfolioTheme extends ThemeKernel
     }
 }
 
-$theme = new PortfolioTheme(wp_get_environment_type(), WP_DEBUG);
-$theme->setTextDomain('portfolio');
+$theme = new StarterTheme(wp_get_environment_type(), WP_DEBUG);
+$theme->setTextDomain('starter');
 $theme->load();
