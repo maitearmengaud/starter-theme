@@ -97,13 +97,6 @@ Le thème utilise des polices personnalisées :
 - `page.html` - Pages statiques
 - `404.html` - Page d'erreur 404
 
-## 📱 Responsive Design
-
-Le thème est entièrement responsive et s'adapte à tous les écrans :
-- Mobile (< 768px)
-- Tablette (768px - 1024px)
-- Desktop (> 1024px)
-
 ## 🔍 SEO et Performance
 
 - Balises meta optimisées
